@@ -1,0 +1,217 @@
+*{
+  padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+}
+.App,body,html{
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color:#121212;
+}
+.container{
+  width: 95%;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  /* flex-wrap: wrap; */
+}
+.streams{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  width: 60%;
+  padding: 20px 0;
+  gap: 5px;
+}
+.streams video{
+  flex-grow: 1;
+  width: 100%;
+  height: 50%;
+  border-radius: 20px;
+  border: 1px solid rgb(0, 128, 49);
+  /* background-color: #242323; */
+}
+.message{
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 5px;
+  padding:20px;
+}
+.messages{
+flex: 1;
+width: 100%;
+border-radius: 20px;
+background-color: #242323;
+display: flex;
+justify-content: flex-start;
+align-items: flex-start;
+flex-direction: column;
+gap: 10px;
+padding: 20px;
+overflow-y: auto;
+overflow-x: hidden;
+}
+.messages ::-webkit-scrollbar{
+  display: none;
+}
+.messages .me{
+  width: 100%;
+  color: whitesmoke;
+  font-size: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items:flex-start;
+  gap: 4px;
+  flex-direction: column;
+}
+.messages .me span{
+  word-wrap: break-word;
+  width: 100%;
+}
+.text{
+  height: 60px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 20px;
+  background-color: #242323;
+  overflow: hidden;
+}
+.text input{
+   flex: 1;
+   height: 100%;
+   padding: 5px 20px;
+   font-size: 18px;
+   color: whitesmoke;
+   font-weight: 500;
+   background-color: #242323;
+   resize: none;
+   outline: none;
+   border: none;
+   word-wrap: break-word;
+}
+.text input::-webkit-scrollbar{
+  display: none;
+}
+.text button{
+  height: 100%;
+  padding: 0 10px;
+  cursor: pointer;
+  font-weight: 600;
+  background-color: rgb(20, 126, 224);
+  color: whitesmoke;
+  border: none;
+  outline: none;
+}
+@keyframes blink { 50% { fill: transparent }}
+.dot { 
+  animation: 1s blink infinite;
+  fill: grey;
+}
+.dot:nth-child(2) { animation-delay: 250ms }
+.dot:nth-child(3) { animation-delay: 500ms }
+
+.loader {
+  background-color: #242323;
+
+  color: grey;
+}
+.usertyping{
+  bottom: 0px;
+  width: 100%;
+  background-color: #242323;
+}
+.header{
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: whitesmoke;
+}
+.header a{
+  color: whitesmoke;
+  text-decoration: none;
+}
+.rubby{
+  margin: 0 auto;
+  padding: 20px 0;
+  width: 80%;
+}
+.rubby button{
+  padding: 10px 20px;
+  cursor: pointer;
+  background-color: rgb(71, 149, 250);
+  color: whitesmoke;
+}
+.startchat{
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  gap: 5px;
+  align-items: center;
+}
+
+@media(max-width:830px){
+  .App, body, html{
+    height: fit-content;
+  }
+  .container{
+    flex-direction: column;
+    margin: 0;
+    width: 100%;
+  }
+  .streams{
+    width: 100%;
+    padding: 0;
+    height: 80vh;
+    position: relative;
+  }
+  .message{
+    width: 100%;
+    max-height: 70vh;
+  }
+  .text input{
+    width: 100% !important;
+  }
+  .streams .myvideo{
+    position: absolute;
+    width: 30%;
+    height: 20%;
+    right: 0;
+    bottom: 0;
+    border-radius: 0;
+    z-index: 999;
+    border: none;
+  }
+  .streams .uservideo{
+   border-radius: 0;
+   border: none;
+  }
+}
+.nav{
+  width: 100%;
+  padding: 20px;
+  color: whitesmoke;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav span{
+  font-weight: 900;
+}
+.nav .live{
+  color: rgb(18, 194, 156);
+  font-size: 16px;
+}
+.nav .logo{
+font-size: 20px;
+}
